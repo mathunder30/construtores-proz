@@ -8,6 +8,7 @@ public class aluno {
     private String senha;
     private String email;
     private String escolaridade;
+    private static Scanner sc = new Scanner(System.in);
     
     
 
@@ -36,13 +37,12 @@ public class aluno {
         System.out.println("Email: "+ this.email);
         System.out.println("Senha: " + this.senha);
     }
-    public void CadastroAluno(){
-
-    }
+    
     public static void main(String[] args) {
-        ArrayList<aluno> Arrayalunos = new ArrayList<>();
+        
         Scanner sc = new Scanner(System.in);
         boolean repeticao = true;
+        ArrayList<aluno> Arrayalunos = new ArrayList<>();
         
         
 
@@ -79,25 +79,56 @@ public class aluno {
         
             } else if (opcoes == 2) {
                 for (aluno x : Arrayalunos){
-            x.printInformacao();
-        }
+                    x.printInformacao();
+                }
             } else if (opcoes == 3) {
-                System.out.println("O que voce deseja modificar? ");
-                System.out.println("1. Nome");
-                System.out.println("2. Escolaridade");
-                System.out.println("3. CPF");
-                System.out.println("4. Email");
-                System.out.println("5. Senha");
-                int modificacao = sc.nextInt();
-                if (modificacao == 1) {
-                    Arrayalunos.set(2 );
-                    
+                for(aluno x : Arrayalunos){
+
                 }
 
                 
             }
             
-        }
+        } 
+        
+
         sc.close();
     }
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public String getCpf() {
+        return cpf;
+    }
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    public String getSenha() {
+        return senha;
+    }
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getEscolaridade() {
+        return escolaridade;
+    }
+    public void setEscolaridade(String escolaridade) {
+        this.escolaridade = escolaridade;
+    }
+    public void ALterarUsuario(){
+        System.out.println("Nome do aluno ao ser alterado: ");
+        String cpf = sc.nextLine();
+        
+    }
 }
+
+
